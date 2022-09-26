@@ -1,4 +1,4 @@
-# bc-online-30
+# it-generation
 
 Заняття 1:
 

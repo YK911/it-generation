@@ -15,13 +15,19 @@
       rel="stylesheet"
     />
 
+    <!-- Modern normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
+    />
+
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Header section -->
     <header class="header">
-      <a class="header-link" href="">
+      <a class="header-link link" href="">
         <img
           class="header-logo"
           src="./images/header/page-logo.png"
@@ -33,7 +39,10 @@
       <nav class="header-nav">
         <ul class="list header-list">
           <li class="header-item" id="item">
-            <a class="header-nav-link link" href="#about">About</a>
+            <a class="header-nav-link link" href="#about"
+              >About
+              <span class="inner-text">some text</span>
+            </a>
           </li>
           <li class="header-item">
             <a class="header-nav-link link" href="#price">Services and prices</a>
@@ -67,8 +76,8 @@
         <div class="hero-right-side">
           <p class="uppertitle uppertitle-theme-dark">A hair salon for men in Kyiv</p>
           <h1 class="main-title">BarberShop</h1>
-          <p class="undertitle undertitle-theme-dark"
-            >We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
+          <p class="undertitle undertitle-theme-dark">
+            We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
           </p>
         </div>
 
@@ -103,11 +112,11 @@
             />
           </li>
         </ul>
-        <div>
+        <div class="about-right-side">
           <p class="uppertitle">About</p>
           <h2 class="title">Best Barbershop in your city</h2>
-          <p class="undertitle"
-            >If you want to add more confidence to your image, you should definitely visit us.
+          <p class="undertitle">
+            If you want to add more confidence to your image, you should definitely visit us.
           </p>
           <p class="about-desc">
             We are a team that never stops at what has been achieved and are thirsty for changes.
@@ -122,7 +131,7 @@
       <section class="price" id="price">
         <p class="uppertitle uppertitle-theme-dark">spend your time with the best masters</p>
         <h2 class="title title-theme-dark">Services and prices</h2>
-        <div class="price-block">
+        <div class="price-group">
           <ul class="price-list list">
             <li class="price-item">Men’s haircut from 300 uah.</li>
             <li class="price-item">Beard trim from 300 uah.</li>
@@ -159,7 +168,7 @@
             <p class="benefits-text">Gifts for regular customers</p>
           </li>
         </ul>
-        <div>
+        <div class="benefits-right-side">
           <p class="uppertitle">old traditional school</p>
           <h2 class="title">Why people come to us?</h2>
           <p class="undertitle">
@@ -174,7 +183,13 @@
         <h2 class="title">Our barbers</h2>
         <ul class="team-list list">
           <li class="team-item">
-            <img src="./images/team/team-1.jpg" alt="John Smith" width="370" height="346" />
+            <img
+              class="team-avatar"
+              src="./images/team/team-1.jpg"
+              alt="John Smith"
+              width="370"
+              height="346"
+            />
             <h3 class="team-name">John Smith</h3>
             <p class="team-position">Extreme Barber</p>
             <ul class="socials list">
@@ -249,19 +264,26 @@
             </ul>
           </li>
           <li class="team-item">
-            <img src="./images/team/team-2.jpg" alt="Michele Doe" width="370" height="346" />
+            <img
+              class="team-avatar"
+              src="./images/team/team-2.jpg"
+              alt="Michele Doe"
+              width="370"
+              height="346"
+            />
             <h3 class="team-name">Michele Doe</h3>
             <p class="team-position">Extreme Barber</p>
-            <ul class="list">
-              <li>
+            <ul class="socials list">
+              <li class="socials-item">
                 <a
-                  class="link"
+                  class="socials-link link"
                   href="https://instagram.com"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                   aria-label="Instagram"
                 >
                   <img
+                    class="socials-icon"
                     src="./images/team/instagram.png"
                     alt="Instagram icon"
                     width="44"
@@ -269,53 +291,80 @@
                   />
                 </a>
               </li>
-              <li>
+              <li class="socials-item">
                 <a
-                  class="link"
+                  class="socials-link link"
                   href="https://twitter.com"
                   aria-label="Twitter"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                 >
-                  <img src="./images/team/twitter.png" alt="Twitter icon" width="44" height="44" />
+                  <img
+                    class="socials-icon"
+                    src="./images/team/twitter.png"
+                    alt="Twitter icon"
+                    width="44"
+                    height="44"
+                  />
                 </a>
               </li>
-              <li>
+              <li class="socials-item">
                 <a
-                  class="link"
+                  class="socials-link link"
                   href="https://facebook.com"
                   aria-label="Facebook"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
-                  ><img src="./images/team/facebook.png" alt="Facebook icon" width="44" height="44"
-                /></a>
+                >
+                  <img
+                    class="socials-icon"
+                    src="./images/team/facebook.png"
+                    alt="Facebook icon"
+                    width="44"
+                    height="44"
+                  />
+                </a>
               </li>
-              <li>
+              <li class="socials-item">
                 <a
-                  class="link"
+                  class="socials-link link"
                   href="https://linkedin.com"
                   aria-label="LinkedIn"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
-                  ><img src="./images/team/linkedin.png" alt="LinkedIn icon" width="44" height="44"
-                /></a>
+                >
+                  <img
+                    class="socials-icon"
+                    src="./images/team/linkedin.png"
+                    alt="LinkedIn icon"
+                    width="44"
+                    height="44"
+                  />
+                </a>
               </li>
             </ul>
           </li>
           <li class="team-item">
-            <img src="./images/team/team-3.jpg" alt="Alan Black" width="370" height="346" />
+            <img
+              class="team-avatar"
+              src="./images/team/team-3.jpg"
+              alt="Alan Black"
+              width="370"
+              height="346"
+            />
             <h3 class="team-name">Alan Black</h3>
             <p class="team-position">Extreme Barber</p>
-            <ul class="list">
-              <li>
+            <ul class="socials list">
+              <li class="socials-item">
                 <a
-                  class="link"
+                  class="socials-link link"
                   href="https://instagram.com"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                   aria-label="Instagram"
                 >
                   <img
+                    class="socials-icon"
                     src="./images/team/instagram.png"
                     alt="Instagram icon"
                     width="44"
@@ -323,36 +372,56 @@
                   />
                 </a>
               </li>
-              <li>
+              <li class="socials-item">
                 <a
-                  class="link"
+                  class="socials-link link"
                   href="https://twitter.com"
                   aria-label="Twitter"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                 >
-                  <img src="./images/team/twitter.png" alt="Twitter icon" width="44" height="44" />
+                  <img
+                    class="socials-icon"
+                    src="./images/team/twitter.png"
+                    alt="Twitter icon"
+                    width="44"
+                    height="44"
+                  />
                 </a>
               </li>
-              <li>
+              <li class="socials-item">
                 <a
-                  class="link"
+                  class="socials-link link"
                   href="https://facebook.com"
                   aria-label="Facebook"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
-                  ><img src="./images/team/facebook.png" alt="Facebook icon" width="44" height="44"
-                /></a>
+                >
+                  <img
+                    class="socials-icon"
+                    src="./images/team/facebook.png"
+                    alt="Facebook icon"
+                    width="44"
+                    height="44"
+                  />
+                </a>
               </li>
-              <li>
+              <li class="socials-item">
                 <a
-                  class="link"
+                  class="socials-link link"
                   href="https://linkedin.com"
                   aria-label="LinkedIn"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
-                  ><img src="./images/team/linkedin.png" alt="LinkedIn icon" width="44" height="44"
-                /></a>
+                >
+                  <img
+                    class="socials-icon"
+                    src="./images/team/linkedin.png"
+                    alt="LinkedIn icon"
+                    width="44"
+                    height="44"
+                  />
+                </a>
               </li>
             </ul>
           </li>
@@ -405,7 +474,7 @@
       <div class="contatcs-group">
         <section class="booking">
           <h2 class="title title-theme-dark">Online-booking</h2>
-          <form>
+          <!-- <form>
             <div>
               <label>
                 <span>name*</span>
@@ -421,7 +490,7 @@
               <textarea name="" id="" cols="30" rows="10"></textarea>
             </label>
             <button type="submit">send</button>
-          </form>
+          </form> -->
         </section>
         <section class="contacts" id="contacts">
           <h2 class="title title-theme-dark">Contacts</h2>
