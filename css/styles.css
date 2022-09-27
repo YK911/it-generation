@@ -148,16 +148,12 @@ img {
 
 .btn:hover,
 .btn:focus {
+  color: var(--light-txt-cl);
   background-color: var(--accent-bg-cl);
 }
 
 .btn-theme-dark {
   color: var(--light-txt-cl);
-}
-
-.btn-theme-dark:hover,
-.btn-theme-dark:focus {
-  background-color: var(--accent-bg-cl);
 }
 
 /**
@@ -228,6 +224,7 @@ img {
 
 .header-group {
   margin-left: auto;
+  padding-right: 20px;
   display: flex;
   align-items: center;
 }
@@ -250,6 +247,8 @@ img {
 }
 
 .hero-right-side {
+  flex-grow: 1;
+
   padding-left: 100px;
   padding-top: 272px;
   padding-bottom: 208px;
