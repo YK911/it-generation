@@ -113,6 +113,7 @@ img {
 }
 
 .title-theme-dark {
+  margin-bottom: 44px;
   color: var(--light-txt-cl);
 }
 
@@ -258,7 +259,15 @@ img {
   width: 358px;
 }
 
+.media-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .media-link {
+  display: block;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -442,6 +451,10 @@ img {
   background-color: #f7f7f7;
 }
 
+.team-title {
+  margin-bottom: 44px;
+}
+
 .team-list {
   --items: 3;
 }
@@ -469,6 +482,10 @@ img {
   |============================
 */
 
+.gallery-uppertitle {
+  margin-bottom: 44px;
+}
+
 .gallery-list {
   --items: 4;
 }
@@ -481,13 +498,31 @@ img {
 .contatcs-group {
   background-color: var(--dark-bg-cl);
 }
+.contatcs-container {
+  display: flex;
+}
+
+.booking {
+  flex-basis: 50%;
+}
 /**
   |============================
   | Contatcs
   |============================
 */
+.contacts {
+  flex-basis: 50%;
+  padding-left: 100px;
+}
+
 .contacts-address {
+  margin-bottom: 70px;
+
   font-style: normal;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .contacts-link {
@@ -495,6 +530,8 @@ img {
 }
 
 .contacts-uppertitle {
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -513,7 +550,18 @@ img {
   | Footer
   |============================
 */
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+.footer-container {
+  display: flex;
+  align-items: center;
+}
+
 .footer-copyright {
+  margin-right: auto;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
