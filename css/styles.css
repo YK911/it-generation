@@ -30,10 +30,10 @@
 */
 body {
   font-family: var(--main-font);
-  color: var(--main-txt-cl);
   font-size: 18px;
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
+  color: var(--main-txt-cl);
 }
 
 /* reset */
@@ -64,6 +64,7 @@ img {
   padding: 0;
 }
 
+/* common styles */
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -166,12 +167,11 @@ img {
 .card-set {
   display: flex;
   flex-wrap: wrap;
-  row-gap: var(--indent-x);
-  column-gap: var(--indent-y);
+  gap: var(--indent);
 }
 
 .card-set-item {
-  flex-basis: calc((100% - var(--indent-y) * (var(--items) - 1)) / var(--items));
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
 /**
@@ -363,6 +363,7 @@ img {
   display: block;
   margin: 0 auto;
 }
+
 /**
   |============================
   | Benefits
@@ -431,6 +432,7 @@ img {
 
   color: #303030;
 }
+
 /**
   |============================
   | Team
@@ -442,12 +444,6 @@ img {
 
 .team-list {
   --items: 3;
-  --indent-y: 30px;
-  --indent-x: 30px;
-}
-
-.team-item {
-  /* flex-basis: calc((100% - 30px * 2) / 3); */
 }
 
 .team-name {
@@ -466,6 +462,7 @@ img {
 
   color: var(--accent-txt-cl);
 }
+
 /**
   |============================
   | Gallery
@@ -474,9 +471,8 @@ img {
 
 .gallery-list {
   --items: 4;
-  --indent-x: 30px;
-  --indent-y: 30px;
 }
+
 /**
   |============================
   | Booking
@@ -511,6 +507,7 @@ img {
 .contacts-schedule {
   color: var(--grey-cl);
 }
+
 /**
   |============================
   | Footer
