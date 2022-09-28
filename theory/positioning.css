@@ -1,0 +1,208 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+h2 {
+  text-align: center;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+=====================
+Властивості позиціонування
+=====================
+*/
+.main-box {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 800px;
+  height: 400px;
+  background-color: lightblue;
+  border-radius: 20px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 150px;
+  height: 150px;
+
+  font-size: 1.2em;
+  color: white;
+
+  background-color: tomato;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.box-4 {
+  background-color: darkred;
+}
+/*
+=====================
+Властивість z-index; позиціонованого елемента
+=====================
+*/
+.box-1 {
+  background-color: hotpink;
+  z-index: 100;
+  position: relative;
+}
+
+.box-2 {
+  background-color: blueviolet;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+}
+
+/*
+=====================
+Абсолютно позиціонований текст над зображенням через position: relative; + postion: absolute;
+=====================
+*/
+.box-3 {
+  /*   position: relative; */
+  /*   top: -40px;
+  left: -60px; */
+  /*   bottom: 140px;
+  right: 160px; */
+
+  position: absolute;
+  bottom: -75px;
+  left: calc(50% - 75px);
+  z-index: -1;
+}
+
+/*
+=====================
+Абсолютно позиціонований текст над зображенням через position: relative; + postion: absolute;
+=====================
+*/
+.img-wrapper {
+  position: relative;
+
+  max-width: 320px;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+.img {
+  display: block;
+}
+.desc {
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 120px);
+
+  width: 200px;
+  height: 100px;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.2em;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*
+=====================
+Фіксоване позиціонування position: fixed;
+=====================
+*/
+.btn-up {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  color: white;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: lightblue;
+
+  cursor: pointer;
+}
+
+/* overflow */
+.container {
+  width: 50vw;
+}
+.item:first-child {
+  margin-bottom: 20px;
+  outline: 2px solid red;
+  height: 100px;
+  color: tomato;
+
+  overflow: auto;
+}
+
+/* .item:first-child .item-txt {
+  width: 800px;
+} */
+
+.item:last-child {
+  padding: 20px;
+  background-color: lightblue;
+  border-radius: 15px;
+}
+
+/*
+=====================
+Скруглена аватарка в карточці юзера із застосуванням overflow: hidden;
+=====================
+*/
+.profile {
+  max-width: 250px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: darkred;
+  border-radius: 20px;
+}
+
+.thumb-avatar {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  outline: 2px solid red;
+  overflow: hidden;
+}
+
+.name {
+  font-size: 1.5em;
+  letter-spacing: 0.08em;
+  color: white;
+  text-align: center;
+}
+
+.position {
+  font-size: 0.6em;
+  letter-spacing: 0.5em;
+}
