@@ -17,7 +17,9 @@ ul {
   margin: 0;
   padding: 0;
 }
-
+img {
+  display: block;
+}
 /*
 =====================
 Властивості позиціонування
@@ -29,6 +31,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+
   width: 800px;
   height: 400px;
   background-color: lightblue;
@@ -47,53 +50,34 @@ ul {
   font-size: 1.2em;
   color: white;
 
-  background-color: tomato;
   border-radius: 10px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
+
+.box-1 {
+  background-color: hotpink;
+}
+
+.box-2 {
+  background-color: blueviolet;
+}
+
+.box-3 {
+  background-color: tomato;
+
+  position: absolute;
+  top: 150px;
+  left: 200px;
+}
+
 .box-4 {
   background-color: darkred;
 }
 /*
 =====================
-Властивість z-index; позиціонованого елемента
-=====================
-*/
-.box-1 {
-  background-color: hotpink;
-  z-index: 100;
-  position: relative;
-}
-
-.box-2 {
-  background-color: blueviolet;
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  z-index: 1;
-}
-
-/*
-=====================
-Абсолютно позиціонований текст над зображенням через position: relative; + postion: absolute;
-=====================
-*/
-.box-3 {
-  /*   position: relative; */
-  /*   top: -40px;
-  left: -60px; */
-  /*   bottom: 140px;
-  right: 160px; */
-
-  position: absolute;
-  bottom: -75px;
-  left: calc(50% - 75px);
-  z-index: -1;
-}
-
-/*
-=====================
-Абсолютно позиціонований текст над зображенням через position: relative; + postion: absolute;
+Абсолютно позиціонований текст
+над зображенням через
+position: relative; + postion: absolute;
 =====================
 */
 .img-wrapper {
@@ -103,18 +87,18 @@ ul {
   margin: 0 auto;
   border-radius: 30px;
 }
-.img {
-  display: block;
-}
+
 .desc {
   position: absolute;
-  bottom: 50px;
-  left: calc(50% - 120px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   width: 200px;
   height: 100px;
   margin: 0;
   padding: 20px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,38 +118,50 @@ ul {
 Фіксоване позиціонування position: fixed;
 =====================
 */
+/* .wrapper {
+  position: relative;
+
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+} */
+
 .btn-up {
   position: fixed;
   bottom: 30px;
   right: 30px;
 
-  color: white;
+  width: 70px;
+  height: 70px;
 
-  width: 50px;
-  height: 50px;
+  color: white;
   border-radius: 50%;
   border: none;
   background-color: lightblue;
+  background-image: url(https://cdn.dribbble.com/users/1396703/screenshots/3952983/pixel-goust-2.gif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   cursor: pointer;
 }
 
-/* overflow */
+/*
+=====================
+overflow
+=====================
+*/
 .container {
   width: 50vw;
 }
 .item:first-child {
   margin-bottom: 20px;
-  outline: 2px solid red;
   height: 100px;
   color: tomato;
 
-  overflow: auto;
+  outline: 1px solid red;
+  overflow: hidden;
 }
-
-/* .item:first-child .item-txt {
-  width: 800px;
-} */
 
 .item:last-child {
   padding: 20px;
@@ -175,7 +171,8 @@ ul {
 
 /*
 =====================
-Скруглена аватарка в карточці юзера із застосуванням overflow: hidden;
+Скруглена аватарка в карточці юзера
+із застосуванням overflow: hidden;
 =====================
 */
 .profile {
@@ -190,9 +187,11 @@ ul {
   margin: 0 auto;
   width: 200px;
   height: 200px;
-  border-radius: 50%;
-  outline: 2px solid red;
+
+  border: 2px solid red;
+
   overflow: hidden;
+  border-radius: 50%;
 }
 
 .name {
@@ -205,4 +204,6 @@ ul {
 .position {
   font-size: 0.6em;
   letter-spacing: 0.5em;
+  color: white;
+  text-align: center;
 }
