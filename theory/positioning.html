@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positioning</title>
+    <!-- Modern normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
+    />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./positioning.css" />
+  </head>
+  <body class="page">
+    <!-- Властивості позиціонування -->
+    <section>
+      <h2>Властивості позиціонування</h2>
+      <div class="main-box">
+        <div class="box box-1">Box 1</div>
+        <div class="box box-2">Box 2</div>
+        <div class="box box-3">Box 3</div>
+        <div class="box box-4">Box 4</div>
+      </div>
+    </section>
+    <!-- Абсолютно позиціонований текст над зображенням через position: relative; + postion: absolute; -->
+    <section>
+      <h2>Абсолютно позиціонований текст над зображенням</h2>
+      <div class="img-wrapper">
+        <img
+          class="img"
+          src="https://images.unsplash.com/photo-1655890938539-7257cdd5ea34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+          alt=""
+          width="320"
+          height="480"
+        />
+        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </section>
+    <!-- Фіксоване позиціонування position: fixed; -->
+    <section>
+      <div class="wrapper">
+        <button class="btn-up"></button>
+      </div>
+    </section>
+    <!-- Переповнення контенту - властивість overflow: hidden; -->
+    <section>
+      <h2>Переповнення контенту</h2>
+      <div class="container">
+        <ul class="list">
+          <li class="item">
+            <p class="item-txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A doloremque accusantium
+              aliquam eius ad velit laborum nisi itaque officia, quae molestias distinctio impedit
+              id hic consequuntur. Deleniti non fugiat ullam!Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. A doloremque accusantium aliquam eius ad velit laborum nisi itaque
+              officia, quae molestias distinctio impedit id hic consequuntur. Deleniti non fugiat
+              ullam!Lorem ipsum dolor sit amet consectetur adipisicing elit. A doloremque
+              accusantium aliquam eius ad velit laborum nisi itaque officia, quae molestias
+              distinctio impedit id hic consequuntur. Deleniti non fugiat ullam!
+            </p>
+          </li>
+          <li class="item">
+            <p class="item-txt">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias iusto porro
+              ducimus deleniti fugiat eveniet consequuntur voluptatibus corporis facilis hic. Quia
+              vel optio explicabo ab soluta quis ullam suscipit nemo.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Скруглена аватарка в карточці юзера із застосуванням overflow: hidden; -->
+    <section>
+      <h2>Скруглена аватарка в карточці юзера</h2>
+      <article class="profile">
+        <div class="thumb-avatar">
+          <img
+            class="avatar"
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+            alt=""
+            width="200"
+            height="300"
+          />
+        </div>
+        <h2 class="name">Lora</h2>
+        <p class="position">Motion Designer</p>
+      </article>
+    </section>
+  </body>
+</html>
