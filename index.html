@@ -21,6 +21,13 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
 
+    <!-- Animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -40,7 +47,7 @@
         <nav class="header-nav">
           <ul class="list header-list">
             <li class="header-item" id="item">
-              <a class="header-nav-link link" href="#about">About </a>
+              <a class="header-nav-link current link" href="#about">About</a>
             </li>
             <li class="header-item">
               <a class="header-nav-link link" href="#price">Services and prices</a>
@@ -55,7 +62,11 @@
         </nav>
         <div class="header-group">
           <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="header-btn btn btn-theme-dark" type="button" data-modal-open>
+          <button
+            class="btn btn-theme-dark animate__animated animate__rubberBand animate__delay-2s"
+            type="button"
+            data-modal-open
+          >
             Online-booking
           </button>
         </div>
@@ -78,7 +89,7 @@
           </div>
           <div class="hero-right-side">
             <p class="uppertitle uppertitle-theme-dark">A hair salon for men in Kyiv</p>
-            <h1 class="main-title">BarberShop</h1>
+            <h1 class="main-title animate__animated animate__lightSpeedInLeft">BarberShop</h1>
             <p class="hero-undertitle undertitle undertitle-theme-dark">
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
@@ -214,13 +225,23 @@
           <h2 class="team-title title">Our barbers</h2>
           <ul class="team-list card-set list">
             <li class="team-item card-set-item">
-              <img
-                class="team-avatar"
-                src="./images/team/team-1.jpg"
-                alt="John Smith"
-                width="370"
-                height="346"
-              />
+              <div class="team-thumb">
+                <img
+                  class="team-avatar"
+                  src="./images/team/team-1.jpg"
+                  alt="John Smith"
+                  width="370"
+                  height="346"
+                />
+
+                <div class="overlay">
+                  <p class="overlay-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, consequatur!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, consequatur!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, consequatur!
+                  </p>
+                </div>
+              </div>
               <div class="team-group">
                 <h3 class="team-name">John Smith</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -281,13 +302,22 @@
               </div>
             </li>
             <li class="team-item card-set-item">
-              <img
-                class="team-avatar"
-                src="./images/team/team-2.jpg"
-                alt="Michele Doe"
-                width="370"
-                height="346"
-              />
+              <div class="team-thumb">
+                <img
+                  class="team-avatar"
+                  src="./images/team/team-2.jpg"
+                  alt="Michele Doe"
+                  width="370"
+                  height="346"
+                />
+                <div class="overlay">
+                  <p class="overlay-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, consequatur!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, consequatur!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, consequatur!
+                  </p>
+                </div>
+              </div>
               <div class="team-group">
                 <h3 class="team-name">Michele Doe</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -421,7 +451,7 @@
           <p class="gallery-uppertitle uppertitle">in Latin, "barba" means "beard"</p>
           <h2 hidden>Our gallery</h2>
           <ul class="gallery-list card-set list">
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item card-set-item" data-aos="fade-right" data-aos-delay="200">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-1.jpg"
@@ -430,7 +460,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item card-set-item" data-aos="fade-right" data-aos-delay="400">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-2.jpg"
@@ -439,7 +469,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item card-set-item" data-aos="fade-right" data-aos-delay="600">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-3.jpg"
@@ -448,7 +478,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item card-set-item" data-aos="fade-right" data-aos-delay="800">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-4.jpg"
@@ -552,5 +582,7 @@
 
     <script src="./js/header.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./js/aos.js"></script>
   </body>
 </html>
