@@ -91,22 +91,6 @@ img {
   line-height: calc(85 / 72);
   letter-spacing: 0.05em;
   color: var(--light-txt-cl);
-
-  /* transform-origin: top left; */
-
-  /* animation: slide-right 2s ease-in-out both; */
-}
-
-@keyframes slide-right {
-  0% {
-    transform: translateX(-260px) scale(0.4);
-  }
-  30% {
-    transform: translateX(0) scale(0.4);
-  }
-  100% {
-    transform: translateX(0) scale(1);
-  }
 }
 
 .uppertitle {
@@ -351,9 +335,6 @@ img {
   | Hero
   |============================
 */
-/* .hero {
-} */
-
 .hero-container {
   display: flex;
 }
@@ -362,6 +343,11 @@ img {
   display: flex;
   align-items: flex-end;
   width: 100px;
+}
+
+.hero-media {
+  transform-origin: top left;
+  transform: rotate(-90deg) translateY(26px) translateX(40px);
 }
 
 .hero-right-side {
@@ -386,9 +372,6 @@ img {
   display: flex;
   align-items: center;
   gap: 40px;
-
-  transform-origin: top left;
-  transform: rotate(-90deg) translateY(26px) translateX(40px);
 }
 
 .media-list::before {
@@ -583,8 +566,7 @@ img {
   text-align: center;
 
   background-color: #f7f7f7;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 .benefits-item:nth-child(2n) {
