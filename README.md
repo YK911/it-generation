@@ -1,20 +1,24 @@
 # it-generation
 
-Заняття 4:
+Заняття 5:
 
-- Властивість `position: static`
-- Відносне позиціонування (`position: relative`)
-- Властивості координат: `top`, `left`, `right`, `bottom`
-- Абсолютне позиціонування (`position: absolute`)
-- Фіксоване позиціонування (`position: fixed`)
-- Липке позиціонування (`position: sticky`)
-- Властивість `z-index`
-- Властивість `overflow`
+- Тег `form`
+- Тег `label`
+- Тег `input`
+- Атрибут `type` тега `input` і його значення (`email`, `password`, `radio`, `checkbox`, `number`,
+  `tel`, `range`, `date`)
+- Атрибути `placeholder`, `checked`, `name`
+- Тег `textarea`
+- Теги `select` та `optgroup`
+- Тег `datalist`
+- Тег `fieldset` і `<div role=""group"">`
 
-- 2D-трансформації: `translate()`, `scale()`, `rotate()`, `skew()`
-- Перспектива та 3D-трансформації
-- Властивості переходів
-- Властивості анімації та директива `@keyframes`
+- Оформлення стану елементів форми
+- Псевдокласи стану: `valid || invalid`, `required || optional`, `checked`, `disabled || enabled`,
+  `in-range || out-of-range`
+- Псевдоелемент `::placeholder` і псевдоклас `:placeholder-shown`
+- Комбінування псевдокласів
+- Псевдоклас `:focus-within`
 
 ---
 
