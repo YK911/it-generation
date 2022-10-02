@@ -1064,6 +1064,7 @@ img {
   transform: translate(-50%, -50%) scale(1) rotate(0);
   opacity: 1;
 
+  padding: 30px;
   width: 450px;
   min-height: 550px;
 
@@ -1097,4 +1098,63 @@ img {
   border: 1px solid #ff6c00;
 
   cursor: pointer;
+}
+
+/* toogler */
+
+.toggler {
+  position: relative;
+  display: inline-block;
+  width: 49px;
+  height: 24px;
+  border-radius: 32px;
+
+  border: 1px solid #cccccc;
+  transition: background-color 400ms;
+  cursor: pointer;
+}
+
+.toggle-checkbox:checked + .toggler {
+  background-color: #ff6c00;
+}
+
+.toggler::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  transform: translateY(-50%);
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+  border: 1px solid #cccccc;
+  background-color: #f4f4f4;
+
+  transition: transform 400ms, border-color 400ms;
+}
+
+.toggle-checkbox:checked + .toggler::before {
+  border-color: transparent;
+  transform: translateY(-50%) translateX(-23px);
+}
+
+/* radio-btns */
+.payment-icon {
+  width: 100px;
+  height: auto;
+}
+
+.payment-icon {
+  fill: #555555;
+  transition: fill var(--anim-fast);
+}
+
+.payment-input:checked + .payment-icon {
+  fill: #ff6c00;
+}
+
+form:focus-within label > span {
+  color: #ff6c00;
 }
