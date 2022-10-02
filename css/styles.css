@@ -786,7 +786,7 @@ img {
 
 .booking-form-label {
   position: absolute;
-  bottom: 8px;
+  top: 8px;
   left: 0;
 
   font-weight: 600;
@@ -834,7 +834,7 @@ img {
   border-color: #ffffff;
 }
 
-.booking-form-input:not(:placeholder-shown):required:valid {
+.booking-form-input:focus:not(:placeholder-shown):required:valid {
   border-color: rgb(1, 183, 7);
 }
 
@@ -910,6 +910,12 @@ img {
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
 }
 
+.booking-form-message:focus + .booking-form-label,
+.booking-form-message:not(:placeholder-shown) + .booking-form-label {
+  color: #ffffff;
+  transform: translateY(-25px) scale(0.8);
+}
+
 /* agreement */
 .form-agreement {
   display: flex;
@@ -920,7 +926,7 @@ img {
 }
 
 .agreement-icon-uncheck {
-  fill: blueviolet;
+  fill: #ff6c00;
   transition: opacity var(--anim-fast);
 }
 
@@ -980,11 +986,15 @@ img {
 }
 
 .contacts-icon.geotag {
+  margin-top: 4px;
   align-self: flex-start;
 }
 
 .contacts-uppertitle {
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 
   font-weight: 600;
   font-size: 11px;
@@ -993,6 +1003,14 @@ img {
   text-transform: uppercase;
 
   color: var(--light-txt-cl);
+}
+
+.contacts-uppertitle:before {
+  content: '';
+
+  width: 60px;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.4);
 }
 
 .contacts-schedule {
@@ -1153,8 +1171,4 @@ img {
 
 .payment-input:checked + .payment-icon {
   fill: #ff6c00;
-}
-
-form:focus-within label > span {
-  color: #ff6c00;
 }
