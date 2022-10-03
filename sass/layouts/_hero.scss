@@ -1,0 +1,54 @@
+/**
+  |============================
+  | Hero
+  |============================
+*/
+.hero-container {
+  display: flex;
+}
+
+.hero-left-side {
+  display: flex;
+  align-items: flex-end;
+  width: 100px;
+}
+
+.hero-media {
+  transform-origin: top left;
+  transform: rotate(-90deg) translateY(26px) translateX(40px);
+}
+
+.hero-right-side {
+  flex-grow: 1;
+
+  padding-left: 100px;
+  padding-top: 272px;
+  padding-bottom: 208px;
+
+  background-color: #191c26;
+  background-image: url(../images/hero/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-undertitle {
+  width: 358px;
+}
+
+.slider-list {
+  display: none;
+}
+
+.slider-btn {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+
+  color: var(--light-txt-cl);
+
+  background-color: transparent;
+
+  cursor: pointer;
+}

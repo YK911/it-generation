@@ -1,24 +1,25 @@
 # it-generation
 
-Заняття 5:
+Заняття 6:
 
-- Тег `form`
-- Тег `label`
-- Тег `input`
-- Атрибут `type` тега `input` і його значення (`email`, `password`, `radio`, `checkbox`, `number`,
-  `tel`, `range`, `date`)
-- Атрибути `placeholder`, `checked`, `name`
-- Тег `textarea`
-- Теги `select` та `optgroup`
-- Тег `datalist`
-- Тег `fieldset` і `<div role=""group"">`
+- Методологія BEM
+- Блоки
+- Елементи
+- Модифікатори
+- Міксування
 
-- Оформлення стану елементів форми
-- Псевдокласи стану: `valid || invalid`, `required || optional`, `checked`, `disabled || enabled`,
-  `in-range || out-of-range`
-- Псевдоелемент `::placeholder` і псевдоклас `:placeholder-shown`
-- Комбінування псевдокласів
-- Псевдоклас `:focus-within`
+---
+
+- Що таке препроцесори
+- Налаштування плагіну `Live sass compiler` для VSCode
+- Змінні та область видимості
+- Вкладені селектори (nesting)
+- Конкатенація (оператор `&`)
+- Вкладеність з оператором конкатенації: `& + .selector || .selector + &`
+- Структура файлів стилей, паршали та @import
+- Плейсхолдери та директива `@extend`
+- Міксіни та директива `@include`
+- Міксіни: дефолтні значення міксінів
 
 ---
 
