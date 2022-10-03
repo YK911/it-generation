@@ -1,4 +1,43 @@
-@mixin section($pt, $pb) {
+@import './decimals';
+
+@mixin section($pt: 120px, $pb: 120px) {
   padding-top: $pt;
   padding-bottom: $pb;
+}
+
+@mixin transition($properties...) {
+  transition-property: $properties;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@mixin fonts($fw, $fs: false, $lh: false, $ls: 0.06em) {
+  // mixin start
+  font-weight: $fw;
+
+  @if ($fs) {
+    font-size: $fs;
+  }
+
+  @if ($lh) {
+    line-height: decimal-round($lh / $fs);
+  }
+
+  letter-spacing: $ls;
+  // mixin end
+}
+
+// @function strip-unit($number) {
+//   @if type-of($number) == 'number' and not unitless($number) {
+//     @return $number / ($number * 0 + 1);
+//   }
+
+//   @return $number;
+// }
+
+@mixin push--auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
 }

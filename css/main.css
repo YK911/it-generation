@@ -282,18 +282,23 @@ img {
   min-height: 40px;
   padding: 11px 19px;
   font-family: inherit;
-  font-weight: 600;
   font-size: 12px;
-  line-height: 1.3333333333;
-  letter-spacing: 0.09em;
+  line-height: 1.33;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--main-txt-cl);
   border: 1px solid #ff6c00;
   border-radius: 25px;
   background-color: transparent;
   cursor: pointer;
-  -webkit-transition: color var(--anim-fast), background-color var(--anim-fast);
-  transition: color var(--anim-fast), background-color var(--anim-fast);
+  -webkit-transition-property: color, background-color, -webkit-box-shadow;
+  transition-property: color, background-color, -webkit-box-shadow;
+  transition-property: color, background-color, box-shadow;
+  transition-property: color, background-color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+          transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .btn:hover, .btn:focus {
   color: var(--light-txt-cl);
@@ -301,6 +306,12 @@ img {
 }
 .btn--theme-dark {
   color: var(--light-txt-cl);
+}
+.btn--large {
+  min-width: 216px;
+}
+.btn--icon-right {
+  margin-left: 12px;
 }
 
 /* Logo */
@@ -320,14 +331,6 @@ img {
 
 .logo__light {
   color: #ffffff;
-}
-
-.header__logo {
-  margin-right: 93px;
-}
-
-.footer__logo {
-  margin-bottom: 20px;
 }
 
 .media-list {
@@ -575,6 +578,7 @@ img {
 }
 
 .header-contact {
+  margin-right: 40px;
   display: block;
   padding-top: 54px;
   padding-bottom: 54px;
@@ -586,9 +590,7 @@ img {
   -webkit-transition: color var(--anim-fast);
   transition: color var(--anim-fast);
 }
-
-.header-contact:hover,
-.header-contact:focus {
+.header-contact:hover, .header-contact:focus {
   color: var(--accent-txt-cl);
 }
 
@@ -601,10 +603,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.header-contact {
-  margin-right: 40px;
 }
 
 .header-btn {
