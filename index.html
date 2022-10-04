@@ -37,14 +37,10 @@
     <!-- Header section -->
     <header class="header" data-header>
       <div class="header__container container">
-        <a class="header__logo logo link" href="">
-          <img
-            class="logo__img"
-            src="./images/header/page-logo.png"
-            alt="BarberSop logo"
-            width="68"
-            height="56"
-          />
+        <a class="header__logo logo link" href="" aria-label="Barbershop logo">
+          <svg class="logo__img" width="68" height="56">
+            <use href="./images/icons.svg#logo"></use>
+          </svg>
         </a>
         <nav class="nav">
           <ul class="nav__list">
@@ -72,12 +68,17 @@
             Online-booking
           </button>
         </div>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu-icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!-- Main section -->
     <main>
       <!-- Hero section -->
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="hero-container container">
           <div class="hero-left-side">
             <ul class="hero-media media-list">
@@ -105,9 +106,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- About section -->
-      <section class="about" id="about">
+      <!-- <section class="about" id="about">
         <div class="about-container container">
           <ul class="about-list list">
             <li class="about-item">
@@ -144,7 +145,7 @@
             <button class="btn" type="button" data-modal-open>online-booking</button>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Price section -->
       <section class="price section" id="price">
         <div class="container">
@@ -188,7 +189,7 @@
         </div>
       </section>
       <!-- Benefits section -->
-      <section class="benefits section">
+      <!-- <section class="benefits section">
         <div class="benefits-container container">
           <div class="benefits-left-side">
             <ul class="benefits-list list">
@@ -219,9 +220,9 @@
             </p>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Team section -->
-      <section class="team section" id="team">
+      <!-- <section class="team section" id="team">
         <div class="container">
           <p class="uppertitle">for true enjoyers of the atmosphere</p>
           <h2 class="team-title title">Our barbers</h2>
@@ -457,9 +458,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Gallery section -->
-      <section class="gallery section">
+      <!-- <section class="gallery section">
         <div class="container">
           <p class="gallery__uppertitle uppertitle">in Latin, "barba" means "beard"</p>
           <h2 hidden>Our gallery</h2>
@@ -501,49 +502,10 @@
               />
             </li>
           </ul>
-
-          <!-- <ul class="gallery-list">
-            <li class="gallery-list__item" data-aos="fade-right" data-aos-delay="100">
-              <img
-                class="gallery-list__img"
-                src="./images/gallery/gallery-img-1.jpg"
-                alt="gallery"
-                width="270"
-                height="360"
-              />
-            </li>
-            <li class="gallery-list__item" data-aos="fade-right" data-aos-delay="400">
-              <img
-                class="gallery-list__img"
-                src="./images/gallery/gallery-img-2.jpg"
-                alt="gallery"
-                width="270"
-                height="360"
-              />
-            </li>
-            <li class="gallery-list__item" data-aos="fade-right" data-aos-delay="700">
-              <img
-                class="gallery-list__img"
-                src="./images/gallery/gallery-img-3.jpg"
-                alt="gallery"
-                width="270"
-                height="360"
-              />
-            </li>
-            <li class="gallery-list__item" data-aos="fade-right" data-aos-delay="1000">
-              <img
-                class="gallery-list__img"
-                src="./images/gallery/gallery-img-4.jpg"
-                alt="gallery"
-                width="270"
-                height="360"
-              />
-            </li>
-          </ul> -->
         </div>
-      </section>
+      </section> -->
       <!-- Booking & Contatcs sections -->
-      <div class="contatcs-group">
+      <!-- <div class="contatcs-group">
         <div class="container contatcs-container">
           <section class="booking section">
             <h2 class="title title--theme-dark">Online-booking</h2>
@@ -639,10 +601,10 @@
             </p>
           </section>
         </div>
-      </div>
+      </div> -->
     </main>
     <!-- Footer section -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="footer-container container">
         <p class="footer-copyright">&#169; Copyright 2020</p>
         <ul class="media-list list">
@@ -654,7 +616,7 @@
           </li>
         </ul>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- Modal -->
     <div class="backdrop is-hidden" data-modal>
@@ -703,8 +665,42 @@
       </div>
     </div>
 
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu-icon" width="40" height="40">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu-nav list">
+        <li><a href="" class="link">Студія</a></li>
+        <li><a href="" class="link">Портфоліо</a></li>
+        <li><a href="" class="link">Контакти</a></li>
+      </ul>
+      <ul class="mobile-menu-contacts list">
+        <li><a href="" class="link">+38 096 111 11 11</a></li>
+        <li><a href="" class="link">info@devstudio.com</a></li>
+      </ul>
+      <ul class="mobile-menu-socilas list">
+        <li><a href="" class="link">Instagram</a></li>
+        <li><a href="" class="link">Twitter</a></li>
+        <li><a href="" class="link">Facebook</a></li>
+        <li><a href="" class="link">LinkedIn</a></li>
+      </ul>
+    </div>
+
     <script src="./js/header.js"></script>
     <script src="./js/modal.js"></script>
+    <!--  Mobile menu -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./js/aos.js"></script>
     <!-- input mask -->
