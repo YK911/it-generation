@@ -108,26 +108,66 @@
         </div>
       </section> -->
       <!-- About section -->
-      <!-- <section class="about" id="about">
+      <section class="about" id="about">
         <div class="about-container container">
           <ul class="about-list list">
             <li class="about-item">
-              <img
-                class="about-img"
-                src="./images/about/img-1.jpg"
-                alt="Beard shaving"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <!-- support webp format -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/about/img-1_lg-@1x.webp 1x, ./images/about/img-1_lg-@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/about/img-1_lg-@1x.jpg 1x, ./images/about/img-1_lg-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- tablet screen -->
+                <!-- support webp format -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/about/img-1_md-@1x.webp 1x, ./images/about/img-1_md-@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/about/img-1_md-@1x.jpg 1x, ./images/about/img-1_md-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img class="about-img" src="./images/about/img-1_md-@1x.jpg" alt="Beard shaving" />
+              </picture>
             </li>
             <li class="about-item">
-              <img
-                class="about-img"
-                src="./images/about/img-2.jpg"
-                alt="Haircut"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <!-- support webp format -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/about/img-2_lg-@1x.webp 1x, ./images/about/img-2_lg-@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/about/img-2_lg-@1x.jpg 1x, ./images/about/img-2_lg-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- tablet screen -->
+                <!-- support webp format -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/about/img-2_md-@1x.webp 1x, ./images/about/img-2_md-@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/about/img-2_md-@1x.jpg 1x, ./images/about/img-2_md-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img class="about-img" src="./images/about/img-2_md-@1x.jpg" alt="Haircut" />
+              </picture>
             </li>
           </ul>
           <div class="about-right-side">
@@ -145,7 +185,7 @@
             <button class="btn" type="button" data-modal-open>online-booking</button>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- Price section -->
       <section class="price section" id="price">
         <div class="container">
@@ -222,21 +262,37 @@
         </div>
       </section> -->
       <!-- Team section -->
-      <!-- <section class="team section" id="team">
-        <div class="container">
+      <section class="team section" id="team">
+        <div class="container team-container">
           <p class="uppertitle">for true enjoyers of the atmosphere</p>
           <h2 class="team-title title">Our barbers</h2>
           <ul class="team-list card-set list">
             <li class="team-item card-set__item">
               <div class="team-thumb">
-                <img
+                <!-- desktop screen -->
+                <!-- <img
                   class="team-avatar"
-                  src="./images/team/team-1.jpg"
+                  srcset="./images/team/x/img1_lg-@1x.jpg 1x, ./images/team/x/img1_lg-@2x.jpg 2x"
+                  src="./images/team/x/img1_lg-@1x.jpg"
                   alt="John Smith"
                   width="370"
                   height="346"
-                />
+                /> -->
 
+                <img
+                  class="team-avatar"
+                  srcset="
+                    ./images/team/img1-370.jpg 370w,
+                    ./images/team/img1-418.jpg 418w,
+                    ./images/team/img1-450.jpg 450w,
+                    ./images/team/img1-740.jpg 740w,
+                    ./images/team/img1-836.jpg 836w,
+                    ./images/team/img1-900.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                  src="./images/team/img1-418.jpg"
+                  alt="John Smith"
+                />
                 <div class="overlay">
                   <p class="overlay-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, consequatur!
@@ -308,10 +364,17 @@
               <div class="team-thumb">
                 <img
                   class="team-avatar"
-                  src="./images/team/team-2.jpg"
+                  srcset="
+                    ./images/team/img2-370.jpg 370w,
+                    ./images/team/img2-418.jpg 418w,
+                    ./images/team/img2-450.jpg 450w,
+                    ./images/team/img2-740.jpg 740w,
+                    ./images/team/img2-836.jpg 836w,
+                    ./images/team/img2-900.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                  src="./images/team/img2-418.jpg"
                   alt="Michele Doe"
-                  width="370"
-                  height="346"
                 />
                 <div class="overlay">
                   <p class="overlay-text">
@@ -384,10 +447,17 @@
               <div class="team-thumb">
                 <img
                   class="team-avatar"
-                  src="./images/team/team-3.jpg"
+                  srcset="
+                    ./images/team/img2-370.jpg 370w,
+                    ./images/team/img2-418.jpg 418w,
+                    ./images/team/img2-450.jpg 450w,
+                    ./images/team/img2-740.jpg 740w,
+                    ./images/team/img2-836.jpg 836w,
+                    ./images/team/img2-900.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                  src="./images/team/img2-418.jpg"
                   alt="Alan Black"
-                  width="370"
-                  height="346"
                 />
                 <div class="overlay">
                   <p class="overlay-text">
@@ -458,7 +528,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Gallery section -->
       <!-- <section class="gallery section">
         <div class="container">
