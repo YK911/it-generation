@@ -1,23 +1,8 @@
-.logo {
-  display: block;
-  font-family: 'Raleway';
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 31px;
-  letter-spacing: 0.03em;
-  color: #2196f3;
-}
-.logo__dark {
-  color: #000000;
-}
-.logo__light {
-  color: #ffffff;
-}
-
 .logo__img {
-  fill: #ffffff;
+  display: block;
+  fill: var(--light-txt-cl);
 
-  @media screen and (min-width: 768px) {
-    fill: #303030;
+  @include mq(tab) {
+    fill: var(--main-txt-cl);
   }
 }

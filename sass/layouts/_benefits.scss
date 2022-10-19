@@ -1,46 +1,66 @@
-/**
-  |============================
-  | Benefits
-  |============================
-*/
-.benefits-container {
-  display: flex;
+.benefits {
+  @include section;
 }
 
-.benefits-right-side {
-  width: 500px;
+.benefits-container {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include mq(desk) {
+    flex-direction: row;
+  }
 }
+
 .benefits-left-side {
-  width: 50%;
-  margin-right: 30px;
+  flex-basis: 50%;
 }
 
 .benefits-list {
-  width: 370px;
+  max-width: 370px;
+
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: center;
 
-  margin: 0 auto;
+  margin-left: auto;
+
+  @include mq(mob-only) {
+    margin-right: auto;
+  }
+
+  @include mq(desk) {
+    margin-right: auto;
+  }
 }
 
 .benefits-item {
-  width: 170px;
+  flex-basis: 170px;
   min-height: 133px;
-  padding: 20px 24px;
+  padding: 20px;
+
   text-align: center;
 
-  background-color: #f7f7f7;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-}
+  background: var(--light-bg-cl);
 
-.benefits-item:nth-child(2n) {
-  margin-top: 30px;
-  margin-left: 30px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+    @include mq(mob) {
+      margin: 0;
+    }
+  }
+
+  &:nth-child(2n) {
+    @include mq(mob) {
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+  }
 }
 
 .benefits-quantity {
-  margin-bottom: 6px;
+  position: relative;
+  display: inline-block;
 
   font-weight: 700;
   font-size: 42px;
@@ -52,6 +72,11 @@
 }
 
 .benefits-decor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(15px, 7px);
+
   font-weight: 600;
   font-size: 16px;
   line-height: calc(22 / 16);
@@ -66,4 +91,12 @@
   text-align: center;
 
   color: #303030;
+}
+
+.benefits-right-side {
+  max-width: 500px;
+
+  @include mq(not-desk) {
+    margin-bottom: 44px;
+  }
 }
